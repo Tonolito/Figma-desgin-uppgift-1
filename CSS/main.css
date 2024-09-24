@@ -727,10 +727,14 @@ input:checked + .slider:before {
 }
 /* FAQ */
 #faq {
+  .container {
+    margin-top: 2.5rem;
+  }
   .top-text {
     text-align: center;
     h2 {
       font-size: 25px;
+      margin-bottom: 1rem;
     }
   }
   .cards {
@@ -743,8 +747,8 @@ input:checked + .slider:before {
     border: solid 1px black;
     border-radius: 8px;
 
-    margin-bottom: 4rem;
-
+    margin-bottom: 3.5rem;
+    margin-top: 3.5rem;
     .question-card {
       display: flex;
       justify-content: space-between;
@@ -762,10 +766,15 @@ input:checked + .slider:before {
     }
   }
   @media (min-width: 768px) {
+    .top-text {
+      h2 {
+        font-size: 32px;
+      }
+    }
     .questions {
       border: none;
       gap: 1rem;
-
+      margin-bottom: 2rem;
       .question-card {
         border-bottom: none;
         border-radius: 8px;
@@ -783,13 +792,120 @@ input:checked + .slider:before {
     .contact-us-card {
       width: 21rem;
       height: 10rem;
+
       border: solid 1px grey;
       border-radius: 8px;
 
+      padding-top: 1.5rem;
       padding-left: 1.5rem;
+
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
+
+      p {
+        padding-top: 1rem;
+        font-size: 14px;
+      }
+      .contact-us {
+        padding: 0;
+        display: flex;
+        align-items: center;
+
+        gap: 0.5rem;
+      }
+    }
+    #contact-btn {
+      display: none;
+    }
+  }
+
+  @media (min-width: 1400px) {
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 2.5fr;
+      grid-template-rows: 1fr 2fr;
+      grid-template-areas:
+        "toptext questions"
+        "contactus questions";
+
+      margin-top: 7rem;
+    }
+    .top-text {
+      grid-area: toptext;
+      text-align: left;
+      p {
+        padding: 2rem 0;
+      }
+    }
+    .questions {
+      grid-area: questions;
+      margin-left: 10rem;
+      margin-top: 0;
+    }
+    .cards {
+      grid-area: contactus;
+    }
+    .contact-us-card {
+      width: 13rem;
+      height: 10rem;
+    }
+  }
+}
+#subscribe {
+  .container {
+    padding-top: 3rem;
+  }
+  .background-color {
+    background-color: #f3f6ff;
+    border-radius: 8px;
+    padding-bottom: 2rem;
+    padding-top: 3rem;
+  }
+  .grid-row {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    padding: 1rem 1rem;
+    gap: 2rem;
+  }
+  .left-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    h2 {
+      font-size: 21px;
+      max-width: 231px;
+    }
+  }
+  .input-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 1rem;
+  }
+  #email {
+    padding: 1.2rem 2em;
+    border-radius: 0.5em 0 0 0.5em;
+    border: none;
+    font-size: 16px;
+  }
+  .sub-btn {
+    border-radius: 0 0.5em 0.5em 0;
+    padding: 1.2rem 1.5em;
+    border: none;
+
+    background-color: blue;
+    color: white;
+  }
+
+  @media (min-width: 768px) {
+    .grid-row {
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      justify-items: center;
     }
   }
 }
