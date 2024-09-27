@@ -9,6 +9,7 @@
       href="https://kit.fontawesome.com/a576612222.css"
       crossorigin="anonymous"
     />
+
     <title>Silicon Home</title>
   </head>
   <body>
@@ -19,7 +20,14 @@
         <div class="container">
           <!-- Logo -->
           <a id="logo" href="index.html"
-            ><img src="/images/Silicon logo.svg" alt="Silicon Logotype"
+            ><img
+              class="lightMode-logo"
+              src="/images/Silicon logo.svg"
+              alt="Silicon Logotype" />
+            <img
+              class="darkMode-logo"
+              src="/images/Silicon logo darkMode.svg"
+              alt="Silicon Logotype"
           /></a>
           <!-- Navbar -->
           <nav id="main-menu" class="navbar">
@@ -28,8 +36,8 @@
           <!-- Toggle Switch -->
           <div id="darkmode-toggle-switch" class="btn-toggle-switch">
             <span class="darkmode-text">Dark mode</span>
-            <label class="switch">
-              <input type="checkbox" />
+            <label class="switch" for="darkmode-switch">
+              <input type="checkbox" id="darkmode-switch" />
               <span class="slider round"></span>
             </label>
           </div>
@@ -58,10 +66,26 @@
               </p>
               <div class="buttons">
                 <a class="btn-download-app" href="#">
-                  <img src="/images/Hero/Appstore.svg" alt=""
-                /></a>
+                  <img
+                    class="lightMode-btn"
+                    src="/images/Hero/Appstore.svg"
+                    alt=""
+                  />
+                  <img
+                    class="darkMode-btn"
+                    src="/images/Hero/AppStore darkMode.svg"
+                    alt=""
+                  />
+                </a>
                 <a class="btn-download-app" href="#">
-                  <img src="/images/Hero/Googleplay.svg" alt=""
+                  <img
+                    class="lightMode-btn"
+                    src="/images/Hero/Googleplay.svg"
+                    alt="" />
+                  <img
+                    class="darkMode-btn"
+                    src="/images/Hero/GooglePlay darkMode.svg"
+                    alt=""
                 /></a>
               </div>
               <a href="#" class="discover-more">
@@ -352,42 +376,98 @@
 
             <div class="questions">
               <div class="question-card">
-                <p>Is any of my personal information stored in the App?</p>
-                <button class="btn-circle">
-                  <i class="fa-solid fa-chevron-down"></i>
-                </button>
+                <div class="question-heading">
+                  <!--Tog lite hjälp av chatgpt för att få accoordion att fungera -->
+                  <p>Is any of my personal information stored in the App?</p>
+                  <button class="btn-circle">
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </button>
+                </div>
+                <div class="accordionitem">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Rerum a officiis asperiores deserunt perspiciatis laborum
+                    inventore veritatis, dolor corporis non.
+                  </p>
+                </div>
               </div>
               <div class="question-card">
-                <p>What formats can I download my transaction history in?</p>
-                <button class="btn-circle">
-                  <i class="fa-solid fa-chevron-down"></i>
-                </button>
+                <div class="question-heading">
+                  <p>What formats can I download my transaction history in?</p>
+                  <button class="btn-circle">
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </button>
+                </div>
+                <div class="accordionitem">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Rerum a officiis asperiores deserunt perspiciatis laborum
+                    inventore veritatis, dolor corporis non.
+                  </p>
+                </div>
               </div>
               <div class="question-card">
-                <p>Can I schedule future transfers?</p>
-                <button class="btn-circle">
-                  <i class="fa-solid fa-chevron-down"></i>
-                </button>
+                <div class="question-heading">
+                  <p>Can I schedule future transfers?</p>
+                  <button class="btn-circle">
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </button>
+                </div>
+                <div class="accordionitem">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Rerum a officiis asperiores deserunt perspiciatis laborum
+                    inventore veritatis, dolor corporis non.
+                  </p>
+                </div>
               </div>
               <div class="question-card">
-                <p>When can I use Banking App services?</p>
-                <button class="btn-circle">
-                  <i class="fa-solid fa-chevron-down"></i>
-                </button>
+                <div class="question-heading">
+                  <p>When can I use Banking App services?</p>
+                  <button class="btn-circle">
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </button>
+                </div>
+                <div class="accordionitem">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Rerum a officiis asperiores deserunt perspiciatis laborum
+                    inventore veritatis, dolor corporis non.
+                  </p>
+                </div>
               </div>
               <div class="question-card">
-                <p>
-                  Can I create my own password that is easy for me to remember?
-                </p>
-                <button class="btn-circle">
-                  <i class="fa-solid fa-chevron-down"></i>
-                </button>
+                <div class="question-heading">
+                  <p>
+                    Can I create my own password that is easy for me to
+                    remember?
+                  </p>
+                  <button class="btn-circle">
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </button>
+                </div>
+                <div class="accordionitem">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Rerum a officiis asperiores deserunt perspiciatis laborum
+                    inventore veritatis, dolor corporis non.
+                  </p>
+                </div>
               </div>
               <div class="question-card">
-                <p>What happens if I forget or lose my password?</p>
-                <button class="btn-circle">
-                  <i class="fa-solid fa-chevron-down"></i>
-                </button>
+                <div class="question-heading">
+                  <p>What happens if I forget or lose my password?</p>
+                  <button class="btn-circle">
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </button>
+                </div>
+                <div class="accordionitem">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Rerum a officiis asperiores deserunt perspiciatis laborum
+                    inventore veritatis, dolor corporis non.
+                  </p>
+                </div>
               </div>
             </div>
             <div class="cards">
@@ -436,11 +516,12 @@
                   </h2>
                 </div>
                 <div class="input-group">
+                  <i class="fa-regular fa-envelope" style="color: #b4b7c9"></i>
                   <input
                     type="email"
                     name="email"
                     id="email"
-                    placeholder="&#xf003; Your email"
+                    placeholder="Your email"
                   />
                   <button class="sub-btn">Subscribe</button>
                 </div>
@@ -456,5 +537,6 @@
         </div>
       </footer>
     </div>
+    <script src="/myScript.js"></script>
   </body>
 </html>
