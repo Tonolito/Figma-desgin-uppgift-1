@@ -1,0 +1,128 @@
+#How-does-it-work {
+  background-color: var(--clr-gray-100);
+  padding-top: 4rem;
+  .container {
+    @include container;
+  }
+
+  .headline {
+    h2 {
+      font-size: var(--font-heading-3);
+      text-align: center;
+    }
+    @include tablet-breakpoint {
+      h2 {
+        font-size: var(--font-heading-2);
+      }
+    }
+    @include desktop-breakpoint {
+      h2 {
+        font-size: var(--font-heading-1);
+      }
+    }
+  }
+
+  .images {
+    @include grid(1fr, 1fr, 0rem, center);
+
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+    #img-my-budget {
+      display: none;
+    }
+    #img-your-cards {
+      display: none;
+    }
+    #img-transfer {
+      display: none;
+    }
+
+    @include tablet-breakpoint {
+      @include grid(1fr 1fr 1fr, 1fr, 0rem);
+      #img-my-budget {
+        display: block;
+        height: auto;
+        width: 90%;
+      }
+      #img-your-cards {
+        display: block;
+        height: auto;
+        width: 90%;
+      }
+      #img-transfer {
+        display: block;
+        height: auto;
+        width: 90%;
+      }
+      #img-transfer-mobile {
+        display: none;
+      }
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+    }
+    @include desktop-breakpoint {
+      margin-top: 4rem;
+      margin-bottom: 4rem;
+    }
+  }
+
+  .content {
+    @include flex(column, stretch, flex-start, 0rem);
+
+    #h3-mobile {
+      font-size: var(--font-heading-5);
+      text-align: center;
+    }
+    #h3-tablet {
+      display: none;
+    }
+    #h3-desktop {
+      display: none;
+    }
+
+    #p-mobile-tablet {
+      font-size: var(--font-body-M);
+      text-align: center;
+      padding-top: 0.5rem;
+      padding-bottom: 3rem;
+      max-width: 27rem;
+    }
+    #p-desktop {
+      display: none;
+    }
+    @include tablet-breakpoint {
+      #h3-mobile {
+        display: none;
+      }
+      #h3-tablet {
+        display: block;
+        text-align: center;
+        font-size: var(--font-heading-4);
+        margin-bottom: 1rem;
+      }
+    }
+    @include desktop-breakpoint {
+      #h3-tablet {
+        display: none;
+      }
+      #h3-desktop {
+        display: block;
+        font-size: var(--font-heading-4);
+        text-align: center;
+      }
+      #p-mobile-tablet {
+        display: none;
+      }
+      #p-desktop {
+        display: block;
+        margin-bottom: 6rem;
+
+        text-align: center;
+
+        padding-top: 1rem;
+        max-width: 40rem;
+      }
+    }
+  }
+}

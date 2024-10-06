@@ -1,0 +1,13 @@
+@mixin text {
+  font-family: var(--font-style);
+  font-weight: var(--font-weight-400);
+  line-height: var(--line-h-160);
+  color: var(--clr-gray-700);
+}
+
+@mixin heading {
+  font-family: var(--font-style);
+  font-weight: var(--font-weight-800);
+  line-height: var(--line-h-130);
+  color: var(--clr-gray-900);
+}

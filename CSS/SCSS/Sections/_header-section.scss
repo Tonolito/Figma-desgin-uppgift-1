@@ -1,0 +1,146 @@
+header .container {
+  @include container;
+  @include grid(1fr auto auto, auto, 1.5rem);
+
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+header .darkMode-logo {
+  display: none;
+}
+/* Navigation  */
+.navbar {
+  display: none;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: var(--font-nav);
+  color: var(--clr-gray-800);
+}
+
+.nav-link:hover {
+  color: red;
+  text-decoration: underline;
+}
+
+/* .active{
+      ??
+   } */
+
+/*Dark mode switch */
+
+.darkmode-text {
+  display: none;
+  font-size: var(--font-nav);
+  color: var(--clr-gray-700);
+  font-weight: 600;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 45px;
+  height: 25px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--clr-gray-600);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 25px;
+  width: 25px;
+  left: 0px;
+  bottom: 0px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: var(--clr-primary);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(21px);
+  -ms-transform: translateX(21px);
+  transform: translateX(20px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.btn-mobile-menu {
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+}
+
+.btn-toggle-switch {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Sign in/up button */
+#signin {
+  display: none;
+  span {
+    color: white;
+  }
+}
+
+@include tablet-breakpoint {
+  .darkmode-text {
+    display: block;
+  }
+  header .container {
+    gap: 3rem;
+  }
+}
+@include desktop-breakpoint {
+  header .container {
+    @include grid(auto 1fr auto auto, auto, 3rem);
+  }
+  .btn-mobile-menu {
+    display: none;
+  }
+  .navbar {
+    display: block;
+  }
+  #signin {
+    display: block;
+  }
+}

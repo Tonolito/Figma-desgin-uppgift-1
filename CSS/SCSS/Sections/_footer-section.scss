@@ -1,0 +1,22 @@
+footer {
+  font-size: var(--font-body-S);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  .container {
+    @include container;
+    @include flex(column, center, center, 0.4rem);
+  }
+  .copyright,
+  .credit {
+    color: var(--clr-gray-600);
+  }
+  @include tablet-breakpoint {
+    .container {
+      @include flex(row, center, center, 0.4rem);
+    }
+  }
+  @include desktop-breakpoint {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}

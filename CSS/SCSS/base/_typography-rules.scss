@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+:root {
+  --font-style: "Manrope", "sans-serif";
+
+  --font-display-h-1: 80px;
+  --font-display-h-2: 72px;
+  --font-display-h-3: 64px;
+  --font-display-h-4: 56px;
+  --font-display-h-5: 48px;
+  --font-display-h-6: 42px;
+
+  --font-heading-1: 40px;
+  --font-heading-2: 32px;
+  --font-heading-3: 28px;
+  --font-heading-4: 24px;
+  --font-heading-5: 20px;
+  --font-heading-6: 16px;
+
+  --font-body-lead: 24px;
+  --font-body-XL: 20px;
+  --font-body-L: 18px;
+  --font-body-M: 16px;
+  --font-body-S: 14px;
+  --font-body-XS: 12px;
+
+  --font-nav: 16px;
+  --font-style: "Manrope", "sans-serif";
+
+  --line-h-130: 130%;
+  --line-h-140: 140%;
+  --line-h-160: 160%;
+
+  --font-weight-800: 800;
+  --font-weight-600: 600;
+  --font-weight-400: 400;
+}
+
+p,
+span,
+ul,
+a {
+  @include text;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  @include heading;
+}

@@ -1,0 +1,30 @@
+.btn-circle {
+  @include btn-circle(44px, 44px);
+}
+
+.btn-primary {
+  @include btn;
+}
+
+.btn-download-app {
+  @include btn-download-app;
+}
+
+.btn-primary {
+  @include button-colors(
+    --clr-primary,
+    --clr-white,
+    --clr-transparent,
+    --clr-primary,
+    --clr-primary
+  );
+}
+.btn-circle {
+  @include button-colors(--clr-white, --clr-gray-800);
+}
+.btn-download-app {
+  @include button-colors(--clr-download-btn, --clr-white);
+}
+.btn-learn-more {
+  @include button-colors(--clr-primary, --clr-white);
+}

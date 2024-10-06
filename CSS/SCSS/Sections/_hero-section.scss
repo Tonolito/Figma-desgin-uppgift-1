@@ -1,0 +1,100 @@
+#hero {
+  background: rgb(99, 102, 241);
+  background: linear-gradient(
+    0deg,
+    rgba(99, 102, 241, 0.09722222222222221) 0%,
+    rgba(218, 70, 239, 0.04629629629629628) 42%,
+    rgba(241, 244, 253, 0.06944444444444442) 83%
+  );
+  padding-bottom: 2rem;
+  overflow: hidden;
+  .container {
+    @include container;
+    @include grid-area(1fr, 1fr, 2rem, "headline" "content");
+    @include tablet-breakpoint {
+      @include grid-area(
+        1fr 1fr,
+        1fr,
+        2rem,
+        "headline headline" "content images"
+      );
+      padding-top: 3rem;
+    }
+  }
+
+  @include desktop-breakpoint {
+    @include grid-area(2fr 3fr, auto, 0rem, "headline images" "content images");
+
+    padding-top: 7rem;
+  }
+}
+
+.headline {
+  text-align: center;
+  grid-area: headline;
+  font-size: var(--font-heading-2);
+}
+.content {
+  text-align: center;
+  grid-area: content;
+  font-size: var(--font-body-L);
+}
+.buttons {
+  @include flex(column, 0, center, 1rem);
+  margin-top: 2rem;
+  .darkMode-btn {
+    display: none;
+  }
+}
+.discover-more {
+  @include flex(row, center, center, 1rem);
+  margin-top: 2rem;
+  span {
+    color: var(--clr-gray-700);
+  }
+  @include tablet-breakpoint {
+    @include flex(column, center, flex-start, 1rem);
+
+    margin-bottom: 2rem;
+  }
+  @include desktop-breakpoint {
+    margin-top: 13rem;
+    margin-bottom: 6rem;
+  }
+}
+
+.images {
+  display: none;
+  grid-area: images;
+  position: relative;
+  @include tablet-breakpoint {
+    display: block;
+  }
+}
+
+.img-back {
+  position: absolute;
+  z-index: -10;
+  bottom: 0;
+  right: 100px;
+  width: 70%;
+  height: auto;
+  @include desktop-breakpoint {
+    width: auto;
+    bottom: 0px;
+    right: 230px;
+  }
+}
+.img-front {
+  position: absolute;
+  z-index: -5;
+  bottom: 0;
+  right: -25px;
+  width: 70%;
+  height: auto;
+
+  @include desktop-breakpoint {
+    width: auto;
+    bottom: 0px;
+  }
+}

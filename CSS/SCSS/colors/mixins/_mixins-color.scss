@@ -1,0 +1,17 @@
+@mixin button-colors(
+  $bg-color,
+  $text-color,
+  $bg-color-hover: null,
+  $text-color-hover: null,
+  $bg-color-active: null
+) {
+  background-color: var($bg-color);
+  color: var($text-color);
+  &:hover {
+    background-color: var($bg-color-hover);
+    color: var($text-color-hover);
+  }
+  &:active {
+    background-color: $bg-color-active;
+  }
+}

@@ -1,0 +1,42 @@
+@mixin grid($grid-columns, $grid-rows, $gap, $justify: null) {
+  display: grid;
+  grid-template-columns: $grid-columns;
+  grid-template-rows: $grid-rows;
+  gap: $gap;
+  justify-items: $justify;
+}
+@mixin grid-area($grid-columns, $grid-rows, $gap, $grid-areas) {
+  display: grid;
+  grid-template-columns: $grid-columns;
+  grid-template-rows: $grid-rows;
+  gap: $gap;
+  grid-template-areas: $grid-areas;
+}
+
+@mixin flex($flex-direction, $align: null, $justify: null, $gap) {
+  display: flex;
+  flex-direction: $flex-direction;
+  align-items: $align;
+  justify-content: $justify;
+  gap: $gap;
+}
+
+@mixin container() {
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  @include tablet-breakpoint {
+    max-width: 720px;
+  }
+  @include desktop-breakpoint {
+    max-width: 1320px;
+  }
+}
+
+@mixin wrapper() {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+}

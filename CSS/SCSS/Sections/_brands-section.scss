@@ -1,0 +1,35 @@
+/* Brands */
+#brands {
+  display: none;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  @include tablet-breakpoint {
+    display: flex;
+  }
+  .container {
+    @include container;
+    @include tablet-breakpoint {
+      @include flex(row, stretch, space-evenly, 0);
+    }
+  }
+
+  .brand-box {
+    border: 1px solid var(--clr-gray-300);
+    border-radius: 8px;
+    height: 100px;
+    width: 200px;
+    @include flex(row, center, center, 0rem);
+  }
+  @include tablet-breakpoint {
+    #brand-1,
+    #brand-2 {
+      display: none;
+    }
+    @include desktop-breakpoint {
+      #brand-1,
+      #brand-2 {
+        display: flex;
+      }
+    }
+  }
+}

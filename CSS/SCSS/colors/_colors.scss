@@ -1,0 +1,29 @@
+:root {
+  --clr-primary: #6366f1;
+  --clr-white: #ffffff;
+  --clr-system-warning: #ffba08;
+  --clr-system-success: #22c55e;
+  --clr-gray-100: #f3f6ff;
+  --clr-gray-200: #eff2fc;
+  --clr-gray-300: #e2e5f1;
+  --clr-gray-400: #d4d7e5;
+  --clr-gray-500: #b4b7c9;
+  --clr-gray-600: #9397ad;
+  --clr-gray-700: #565973;
+  --clr-gray-800: #33354d;
+  --clr-gray-900: #0b0f19;
+  --clr-nav-hover: #6366f2;
+  --clr-font-mobile-tablet: #585c7b;
+  --clr-transparent: #00000000;
+  --clr-download-btn: #0b0f19;
+}
+
+:root.dark {
+  color-scheme: dark;
+  --clr-gray-900: #fff;
+  --clr-gray-100: #0b0f19;
+  --clr-white: #9397ad;
+  --clr-gray-600: #565973;
+  --clr-download-btn: #eff2fc;
+  --clr-gray-800: white;
+}

@@ -1,0 +1,39 @@
+@mixin btn() {
+  border-radius: 8px;
+  padding: 12px 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+@mixin btn-circle($width, $height) {
+  width: $width;
+  height: $height;
+  border-radius: 50%;
+  border: none;
+  box-shadow: 0 3px 7px rgba(128, 128, 128, 0.253);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin btn-download-app {
+  border-radius: 8px;
+  padding: 12px 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+@mixin btn-learn-more {
+  gap: 1em;
+  width: 10rem;
+  font-size: var(--font-body-S);
+
+  color: white;
+}
+@mixin btn-toggle-switch {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

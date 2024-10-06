@@ -1,0 +1,75 @@
+#learn-more {
+  display: none;
+
+  .container {
+    @include container;
+  }
+  @include desktop-breakpoint {
+    .container {
+      padding: 6rem 0;
+    }
+    display: block;
+    .flex-even {
+      @include flex(row, stretch, center, 10rem);
+    }
+    .content {
+      @include flex(column, stretch, center, 0);
+
+      h2 {
+        text-align: left;
+        max-width: 26rem;
+        margin-bottom: 2rem;
+      }
+      li {
+        margin-bottom: 1rem;
+      }
+      ul {
+        list-style-image: url("/images/Learn\ more/blue-check-circle.svg");
+        list-style-position: inside;
+      }
+    }
+    #btn-learn-more {
+      gap: 1em;
+      width: 10rem;
+      font-size: var(--font-body-S);
+      color: white;
+    }
+    #learn-more-bottom {
+      gap: 5rem;
+    }
+    .image-contacts {
+      padding-left: 5rem;
+    }
+    #contact-headline {
+      h2 {
+        max-width: 33rem;
+      }
+    }
+    .app-feat-grid {
+      @include grid(1fr, auto, 0rem);
+
+      @include tablet-breakpoint {
+        grid-template-columns: 1fr 1fr;
+      }
+      @include desktop-breakpoint {
+        gap: 2.5rem;
+      }
+    }
+    .feat-box {
+      @include grid-area(
+        1fr,
+        1fr 2fr,
+        0rem,
+        "image1 image1" "paragragh2  paragragh2"
+      );
+    }
+    #feat-7 {
+      img {
+        grid-area: image1;
+      }
+      p {
+        grid-area: paragragh2;
+      }
+    }
+  }
+}
